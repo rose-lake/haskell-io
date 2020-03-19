@@ -1,0 +1,50 @@
+name:                mastermind-v2
+version:             0.1.0.0
+github:              "rose-lake/mastermind-v2"
+license:             BSD3
+author:              "Ksenia Rose Lake"
+maintainer:          "kseniaroselake@gmail.com"
+copyright:           "2020 Ksenia Rose Lake"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/rose-lake/mastermind-v2#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- containers
+- random
+
+library:
+  source-dirs: src
+
+executables:
+  mastermind-v2-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - mastermind-v2
+
+tests:
+  mastermind-v2-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - mastermind-v2
