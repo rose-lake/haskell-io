@@ -9,14 +9,15 @@ import System.Random
 
 main :: IO ()
 main = do
-  secret <- replicateM 4 randomIO
+  secret <- replicateM 4 randomIO       -- randomIO :: IO a
   print secret
-  game secret 10
+  game secret 10                        -- game :: Secret -> Int -> IO ()
+  --note: because of both of those type signatures (above), randomIO INFERS that we are requiring Secret as the type. So it randomly generates four instances of Secret. So awesome!
 
 game :: Secret -> Int -> IO ()
 game secret turnsRemaining = do
   if turnsRemaining <= 0
-  then putStrLn "you succcc"
+  then putStrLn "boooo"
   else do
     putStrLn "Enter a guess:"
     input <- getInput
@@ -53,11 +54,11 @@ parseColor 'b' = Blue
 parseColor 'o' = Orange
 parseColor 'y' = Yellow
 parseColor 'p' = Purple
--- trying to do something like checking if it's an upper-case character... list comprehension? maybe.
--- needs work
--- parseColor [x <- ['A'..'Z']] = error "please use lowercase letters only"
 parseColor _ = error "rip"
 
+-- this gets a character while hiding the typed input from the terminal,
+-- we used to use this for user-generating a game 'secret',
+-- then we changed over to using the random library to generate the secret
 getCh :: IO Char
 getCh = do
   hSetEcho stdin False
