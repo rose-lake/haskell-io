@@ -1,9 +1,10 @@
 # exercises
 
-## adder :: simple IO 'game'
-- The game asks the user how many numbers they wish to add
-- It then prompts the user for each number to add
-- And finally displays the sum
+## adder 
+- simple IO 'game'
+    - The game asks the user how many numbers they wish to add
+    - It then prompts the user for each number to add
+    - And finally displays the sum
 
 - `adder_integer`
     - More robust validation and data types. Stores user input in an Integer.
