@@ -1,6 +1,6 @@
 # exercises
 
-## adder 
+## adder
 - simple IO 'game'
     - The game asks the user how many numbers they wish to add
     - It then prompts the user for each number to add
