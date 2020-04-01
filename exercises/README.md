@@ -5,8 +5,12 @@
 - It then prompts the user for each number to add
 - And finally displays the sum
 
+- `adder`
+    - another implementation using `sequence`
+    - app/Main.hs
+
 - `adder_integer`
-    - More robust validation and data types. Stores user input in an Integer.
+    - More robust implementation, with better validation. Stores user input in an Integer.
     - src/Adder_Integer.hs
 
 - `adder_int`

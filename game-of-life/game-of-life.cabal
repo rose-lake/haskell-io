@@ -4,14 +4,15 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: a1b7cbef12115c856261a9af8101b1bba37d6716323910c73c7b233d13aefb39
+-- hash: e00f47eb9338ae1f0205cd88b33f8691d38ff85f1597da973fcfd4146a3e6807
 
-name:           exercises
+name:           game-of-life
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/rose-lake/exercises#readme>
-homepage:       https://github.com/rose-lake/exercises#readme
-bug-reports:    https://github.com/rose-lake/exercises/issues
+description:    Please see the README on GitHub at <https://github.com/rose-lake/game-of-life#readme>
+homepage:       https://github.com/rose-lake/game-of-life#readme
+bug-reports:    https://github.com/rose-lake/game-of-life/issues
 author:         Ksenia Rose Lake
+maintainer:     kseniaroselake@gmail.com
 copyright:      2020 Ksenia Rose Lake
 license:        BSD3
 license-file:   LICENSE
@@ -22,46 +23,40 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/rose-lake/exercises
+  location: https://github.com/rose-lake/game-of-life
 
 library
   exposed-modules:
-      Adder_Int
-      Adder_Integer
-      Examples
       Lib
   other-modules:
-      Paths_exercises
+      Paths_game_of_life
   hs-source-dirs:
       src
   build-depends:
       base >=4.7 && <5
-    , digits
   default-language: Haskell2010
 
-executable exercises-exe
+executable game-of-life-exe
   main-is: Main.hs
   other-modules:
-      Paths_exercises
+      Paths_game_of_life
   hs-source-dirs:
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , digits
-    , exercises
+    , game-of-life
   default-language: Haskell2010
 
-test-suite exercises-test
+test-suite game-of-life-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_exercises
+      Paths_game_of_life
   hs-source-dirs:
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , digits
-    , exercises
+    , game-of-life
   default-language: Haskell2010

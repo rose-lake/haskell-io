@@ -1,6 +1,6 @@
-name:                mastermind-v2
+name:                game-of-life
 version:             0.1.0.0
-github:              "rose-lake/mastermind-v2"
+github:              "rose-lake/game-of-life"
 license:             BSD3
 author:              "Ksenia Rose Lake"
 maintainer:          ""
@@ -17,18 +17,16 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/rose-lake/mastermind-v2#readme>
+description:         Please see the README on GitHub at <https://github.com/rose-lake/game-of-life#readme>
 
 dependencies:
 - base >= 4.7 && < 5
-- containers
-- random
 
 library:
   source-dirs: src
 
 executables:
-  mastermind-v2-exe:
+  game-of-life-exe:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
@@ -36,10 +34,10 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - mastermind-v2
+    - game-of-life
 
 tests:
-  mastermind-v2-test:
+  game-of-life-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
@@ -47,4 +45,4 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - mastermind-v2
+    - game-of-life
