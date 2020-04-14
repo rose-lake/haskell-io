@@ -1,0 +1,7 @@
+.stack-work/
+*~
+
+# keeping the default `stack` structures
+# but gitignoring the stuff that's not really relevant to my examples
+/**/test/
+/**/ChangeLog.md
