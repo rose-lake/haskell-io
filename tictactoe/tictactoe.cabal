@@ -4,14 +4,15 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 2c8c55427e7b162ce6fa5704cac2102d2088a0aa703fd0065c9660253b82b78a
+-- hash: cc7a7a3fc77b1c724d7faade3c6fac054da6828d5657b741271db2ac96ec70de
 
-name:           nim
+name:           tictactoe
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/rose-lake/nim#readme>
-homepage:       https://github.com/rose-lake/nim#readme
-bug-reports:    https://github.com/rose-lake/nim/issues
+description:    Please see the README on GitHub at <https://github.com/rose-lake/tictactoe#readme>
+homepage:       https://github.com/rose-lake/tictactoe#readme
+bug-reports:    https://github.com/rose-lake/tictactoe/issues
 author:         Ksenia Rose Lake
+maintainer:     54857738+rose-lake@users.noreply.github.com
 copyright:      2020 Ksenia Rose Lake
 license:        BSD3
 license-file:   LICENSE
@@ -22,40 +23,40 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/rose-lake/nim
+  location: https://github.com/rose-lake/tictactoe
 
 library
   exposed-modules:
       Lib
   other-modules:
-      Paths_nim
+      Paths_tictactoe
   hs-source-dirs:
       src
   build-depends:
       base >=4.7 && <5
   default-language: Haskell2010
 
-executable nim-exe
+executable tictactoe-exe
   main-is: Main.hs
   other-modules:
-      Paths_nim
+      Paths_tictactoe
   hs-source-dirs:
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , nim
+    , tictactoe
   default-language: Haskell2010
 
-test-suite nim-test
+test-suite tictactoe-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_nim
+      Paths_tictactoe
   hs-source-dirs:
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , nim
+    , tictactoe
   default-language: Haskell2010

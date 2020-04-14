@@ -4,7 +4,7 @@ import Lib
 import Data.Char
 
 main :: IO ()
-main = someFunc
+main = nim
 
 -- game of nim example from Hutton Ch.10
 
