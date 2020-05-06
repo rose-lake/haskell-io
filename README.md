@@ -6,4 +6,4 @@ A few IO games written in Haskell!
 - My own implementation of the classic!
 
 ## mastermind v1 and v2
-- Several different implementations created and extended collaboratively by our Recurse Center Haskell Study Group, Spring 2020.
+- Several implementations created and extended collaboratively by our Recurse Center Haskell Study Group, Spring 2020.
